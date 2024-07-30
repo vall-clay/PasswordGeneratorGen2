@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator by Vall</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-image: linear-gradient(to bottom, #131313, #000);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
+
+      .card {
+        background-image: linear-gradient(to bottom, #fff, #ddd);
+        background-size: 100% 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 18rem;
+      }
+      /* iPhone 12 */
+      @media (max-width: 375px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+        }
+        label {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Samsung Galaxy S21 */
+      @media (max-width: 360px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+        }
+        label {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Google Pixel 4 */
+      @media (max-width: 360px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+        }
+        label {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* iPhone 8 */
+      @media (max-width: 320px) {
+        .btn-lg {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.9rem;
+        }
+        label {
+          font-size: 0.7rem;
+        }
+      }
+
+      /* Samsung Galaxy S8 */
+      @media (max-width: 320px) {
+        .btn-lg {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.9rem;
+        }
+        label {
+          font-size: 0.7rem;
+        }
+      }
+
+      /* OnePlus 7 Pro */
+      @media (max-width: 412px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 50%;
+        }
+        label {
+          font-size: 50%;
+        }
+      }
+
+      /* Huawei P30 Pro */
+      @media (max-width: 398px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 50%;
+        }
+        label {
+          font-size: 50%;
+        }
+      }
+
+      /* Xiaomi Redmi 9 */
+      @media (max-width: 395px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 50%;
+        }
+        label {
+          font-size: 50%;
+        }
+      }
+
+      /* Oppo Reno Ace 2 */
+      @media (max-width: 390px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 50%;
+        }
+        label {
+          font-size: 50%;
+        }
+      }
+
+      /* Vivo V20 SE */
+      @media (max-width: 385px) {
+        .btn-lg {
+          padding: 0.5rem 1rem;
+          font-size: 50%;
+        }
+        label {
+          font-size: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="collapse"
+      id="navbarToggleExternalContent"
+      data-bs-theme="light"
+    >
+      <div class="bg-light p-4">
+        <h5 class="text-body-emphasis fw-bold fst-italic">
+          PASSWORD GENERATOR
+        </h5>
+        <span class="text-body-secondary fw-bold">by Noval Aditya.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <div class="card w-50">
+        <div class="card-body">
+          <h1 class="fw-bold fst-italic font-size 0.4rem">
+            PASSWORD GENERATOR
+          </h1>
+          <div class="d-flex flex-column gap-2 mt-2">
+            <label for="passwordLength" class="text-uppercase fw-bold"
+              >Panjang Password</label
+            >
+            <input
+              class="form-control form-control-lg"
+              id="passwordLength"
+              type="number"
+            />
+            <label for="passwordName" class="text-uppercase fw-bold"
+              >Nama Password</label
+            >
+            <input
+              class="form-control form-control-lg"
+              id="passwordName"
+              type="text"
+            />
+            <label for="password" class="text-uppercase fw-bold fst-italic"
+              >Password</label
+            >
+            <input
+              class="form-control form-control-lg"
+              id="password"
+              disabled
+            />
+            <button
+              class="btn btn-primary text-uppercase fw-bold fst-italic font-size 80% btn-lg mt-2"
+              onclick="getPassword()"
+            >
+              generate password
+            </button>
+            <a
+              class="btn btn-success text-uppercase fw-bold btn-lg mt-2"
+              onclick="savePassword()"
+              id="saveButton"
+              >SAVE PASSWORD</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
